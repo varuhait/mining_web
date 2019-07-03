@@ -27,7 +27,7 @@ class BalanceCalculate:
             self.total_balance += round( self.settings.all_ore_price[self.loot_list[i][2]] * self.loot_list[i][1] *  self.buy_coefficient)
 
         for i in self.personal_balances:
-            self.personal_balances_ratio[i] = self.personal_balances[i] / self.total_balance
+            self.personal_balances_ratio[i] = self.personal_balances[i] / self.total_balance * (1 - self.buy_coefficient)
 
         all_prices = [self.personal_balances,self.ore_balances,self.personal_balances_ratio,self.total_balance]
         return all_prices

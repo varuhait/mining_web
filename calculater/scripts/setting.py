@@ -5,14 +5,14 @@ class InitOrePrice:
     #ミネラル,月資源価格の初期設定
     materials = {
     #月じゃない
-    'Tritanium' : 4.60,
-    'Pyerite' : 3.92,
-    'Mexallon' : 57.06,
-    'Isogen' : 15.89,
-    'Nocxium' : 299.68,
-    'Zydrine' : 501.61,
-    'Megacyte' : 437.70,
-    'Morhphite' : 8038.95,
+    'Tritanium' : 7.06,
+    'Pyerite' : 4.39,
+    'Mexallon' : 62.30,
+    'Isogen' : 14.93,
+    'Nocxium' : 316.00,
+    'Zydrine' : 524.62,
+    'Megacyte' : 437.97,
+    'Morhphite' : 9528.06,
 
     #月
     'Atmostpheric Gases' : 137.93,
