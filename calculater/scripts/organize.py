@@ -11,20 +11,22 @@ class Datamanage:
         #リストへの整理
         Loot_info = []
         raw_loot = self.loot
-        raw_loot = raw_loot.split("\n")
+        raw_loot = raw_loot.split("\r\n")
         for i in range(len(raw_loot)):
             Loot_info.append(raw_loot[i].split(" "))
+        while len(Loot_info[-1]) <= 1:
+            del Loot_info[-1]
 
         #余分な要素を削除(及び取得アイテム数のint化)
         for i in range(len(Loot_info)):
             del Loot_info[i][0]
             del Loot_info[i][-1]
-            if Loot_info[i][1] == "が":
-                Loot_info[i][2] = int(Loot_info[i][2].replace(",",""))
-            else:
-                Loot_info[i][3] = int(Loot_info[i][3].replace(",",""))
+            while Loot_info[i][1] != "が":
+                Loot_info[i][0] = Loot_info[i][0] + ' '+ Loot_info[i][1]
+                del Loot_info[i][1]
             Loot_info[i].remove("が")
             Loot_info[i].remove("x")
+            Loot_info[i][1] = int(Loot_info[i][1].replace(",",""))
 
         return Loot_info
 
