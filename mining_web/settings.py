@@ -68,7 +68,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
             ],
             'libraries': {
-                'lookup': 'calculate.templatetags.lookup'
+                'lookup': 'calculater.templatetags.lookup'
             }
         },
     },
