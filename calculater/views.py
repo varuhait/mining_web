@@ -4,6 +4,7 @@ sys.path.append(os.path.dirname(__file__))
 
 from scripts.organize import Datamanage
 from scripts.calculater import BalanceCalculate
+from scripts.setting import InitOrePrice
 
 # Create your views here.
 def calculater(request):
@@ -23,6 +24,7 @@ def calculate_result(request):
         ignore = request.POST['ignores']
         buy_coefficient = float(request.POST['jita_buy'])/100
         fuel_tax = float(request.POST['fuel_tax'])/100
+        admin = request.POST['administrator']
 
         data_organize = Datamanage(loot,ignore)
         loot_list = data_organize.LootTrim()
@@ -32,12 +34,20 @@ def calculate_result(request):
         calculate = BalanceCalculate(Trimed_list,buy_coefficient,fuel_tax)
         balance = calculate.balances()
 
+        ore_prices = InitOrePrice()
+
 
         dict = {
             'personal': balance[0],
             'ore': balance[1],
             'ratio': balance[2],
-            'total': balance[3]
+            'p_ores': balance[3],
+            'p_ores_q': balance[4],
+            'datas' : balance[5],
+            'total': balance[6],
+            'admin': admin,
+            'inits': ore_prices,
+            'jita_buy': buy_coefficient*100,
         }
-        
+
         return render(request, 'calculate_result.html',dict)

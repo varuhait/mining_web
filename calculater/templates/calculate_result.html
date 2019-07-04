@@ -1,4 +1,42 @@
-<p>{{personal}}</p>
-<p>{{ore}}</p>
-<p>{{ratio}}</p>
-<p>{{total}}</p>
+{% load lookup %}
+
+<body>
+  <h1>管理者 : {{admin}}</h1><br><br>
+  {% for person, quantum in datas.items %}
+        <h2>振込先:{{person}}</h2>
+        <table>
+          <tr>
+            <th>鉱石名</th><td></td><td>単価　<td></td><td>納品量</td><td></td><td>金額</td>
+          </tr>
+          <tr>
+            <th>　</th>
+          </tr>
+          {% for ores, values in quantum.items %}
+          {% if ores == 'total' %}
+          <tr>
+            <th>　</th>
+          </tr>
+          <tr>
+            <th>合計</th><td></td><td></td><td></td><td></td><td>=</td><td>{{values}}</td><td>ISK</td>
+          </tr>
+          {% elif ores == 'tax' %}
+          <tr>
+            <th>管理費</th><td></td><td></td><td></td><td></td><td>=</td><td>{{values}}</td><td>ISK</td>
+          </tr>
+          {% elif ores == 'pay' %}
+          <tr>
+            <th>支払額</th><td></td><td></td><td></td><td></td><td>=</td><td>{{values}}</td><td>ISK</td>
+          </tr>
+          {% else %}
+          <tr>
+            <th>{{ores}}</th><td>　×　</td><td>{{inits.all_ore_price |lookup:ores}}</td>
+            {% for mass, price in values.items %}
+            <td>×　</td><td>{{mass}}</td><td>=</td><td>{{price}}</td><td>ISK</td>
+            {% endfor %}
+          </tr>
+        {% endif %}
+        {% endfor %}
+        </table>
+        <br><br>
+  {% endfor %}
+</body>
