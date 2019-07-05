@@ -5,13 +5,13 @@ from collections import OrderedDict
 class BalanceCalculate:
     def __init__(self,loot_list,buy_coefficient,fuel_tax):
         self.settings = setting.InitOrePrice()
-        self.personal_balances = {}
-        self.personal_balances_ratio = {}
-        self.personal_ores = {}
-        self.personal_ores_quant = {}
+        self.personal_balances = OrderedDict()
+        self.personal_balances_ratio = OrderedDict()
+        self.personal_ores = OrderedDict()
+        self.personal_ores_quant = OrderedDict()
         self.personal_data = OrderedDict()
-        self.personal_totals = {}
-        self.ore_balances = {}
+        self.personal_totals = OrderedDict()
+        self.ore_balances = OrderedDict()
         self.total_balance = 0
         self.loot_list = loot_list
         self.buy_coefficient = buy_coefficient
@@ -27,23 +27,23 @@ class BalanceCalculate:
             if self.loot_list[i][0] in self.personal_ores:
                 pass
             else:
-                self.personal_ores[self.loot_list[i][0]] = {}
+                self.personal_ores[self.loot_list[i][0]] = OrderedDict()
 
             self.personal_ores[self.loot_list[i][0]][self.loot_list[i][2]] = 0
 
             if self.loot_list[i][0] in self.personal_ores_quant:
                 pass
             else:
-                self.personal_ores_quant[self.loot_list[i][0]] = {}
+                self.personal_ores_quant[self.loot_list[i][0]] = OrderedDict()
 
             self.personal_ores_quant[self.loot_list[i][0]][self.loot_list[i][2]] = 0
 
             if self.loot_list[i][0] in self.personal_data:
                 pass
             else:
-                self.personal_data[self.loot_list[i][0]] = {}
+                self.personal_data[self.loot_list[i][0]] = OrderedDict()
 
-            self.personal_data[self.loot_list[i][0]][self.loot_list[i][2]] = {}
+            self.personal_data[self.loot_list[i][0]][self.loot_list[i][2]] = OrderedDict()
 
         #プレイヤー、鉱石毎の値段を足し合わせる
         for i in range(len(self.loot_list)):
