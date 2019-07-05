@@ -25,7 +25,7 @@ SECRET_KEY = 'em#u8fw2%$i@n$bnm-g7j^^$t6zu#u30k(r79nu)o-&l&@n!po'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['oncbnminers.pythonanywhere.com']
+ALLOWED_HOSTS = ['oncbnminers.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition

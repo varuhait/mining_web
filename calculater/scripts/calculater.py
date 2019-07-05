@@ -1,4 +1,5 @@
 import scripts.setting as setting
+from collections import OrderedDict
 
 #合計推定金額、個人推定金額、および比の算出
 class BalanceCalculate:
@@ -8,7 +9,7 @@ class BalanceCalculate:
         self.personal_balances_ratio = {}
         self.personal_ores = {}
         self.personal_ores_quant = {}
-        self.personal_data = {}
+        self.personal_data = OrderedDict()
         self.personal_totals = {}
         self.ore_balances = {}
         self.total_balance = 0

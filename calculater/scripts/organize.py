@@ -1,4 +1,5 @@
 import scripts.setting as setting
+from collections import OrderedDict
 
 class Datamanage:
     def __init__(self,loot,ignore):
