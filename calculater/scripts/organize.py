@@ -46,17 +46,16 @@ class Datamanage:
         count = 0
 
         #無視プレイヤーの反映
+        for i in range(len(ignore_list)):
+            while len(ignore_list[i]) != 1:
+                ignore_list[i][0] = ignore_list[i][0] + " " + ignore_list[i][1]
+                del ignore_list[i][1]
+
         for i in range(len(loot_list)):
             for j in range(len(ignore_list)):
-                if loot_list[i][0] ==  ignore_list[j][0]:
-                    if len(ignore_list[j]) == 1:
-                        number.append(i)
-                    elif loot_list[i][1] == ignore_list[j][1]:
-                        number.append(i)
-                    else:
-                        pass
-                else:
-                    pass
+                if loot_list[i][0] == ignore_list[j][0]:
+                    number.append(i)
+
         for i in number:
             del loot_list[i-count]
             count += 1
