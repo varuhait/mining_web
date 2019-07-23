@@ -34,7 +34,7 @@ class Datamanage:
     def IgnoreTrim(self):
         ignore_info = []
         raw_ignore = self.ignore
-        raw_ignore = raw_ignore.split("\n")
+        raw_ignore = raw_ignore.split("\r\n")
         for i in range(len(raw_ignore)):
             ignore_info.append(raw_ignore[i].split(" "))
 

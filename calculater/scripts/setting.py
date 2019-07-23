@@ -5,14 +5,14 @@ class InitOrePrice:
     #ミネラル,月資源価格の初期設定
     materials = {
     #月じゃない
-    'Tritanium' : 7.06,
-    'Pyerite' : 4.39,
-    'Mexallon' : 62.30,
-    'Isogen' : 14.93,
-    'Nocxium' : 316.00,
-    'Zydrine' : 524.62,
-    'Megacyte' : 437.97,
-    'Morhphite' : 9528.06,
+    'Tritanium' : 6.53,
+    'Pyerite' : 4.52,
+    'Mexallon' : 59.38,
+    'Isogen' : 15.38,
+    'Nocxium' : 338.37,
+    'Zydrine' : 523.98,
+    'Megacyte' : 419.83,
+    'Morhphite' : 10544.98,
 
     #月
     'Atmostpheric Gases' : 137.93,
@@ -35,6 +35,15 @@ class InitOrePrice:
     'Dysprosium' : 91799.00,
     'Neodymium' : 90798.68,
     'Thulium' : 43997.45,
+
+    #アイス精製物
+    'Heavy Water' : 285.40,
+    'Helium Isotopes': 715.34,
+    'Hydrogen Isotopes': 719.36,
+    'Liquid Ozone': 219.26,
+    'Nitrogen Isotopes': 649.15,
+    'Oxygen Isotopes': 718.81,
+    'Strontium Clathrates': 3795.19,
     }
 
     standard_ore_price = {
@@ -110,6 +119,9 @@ class InitOrePrice:
     'Zeolites' : (materials['Tritanium']*4000 + materials['Pyerite']*8000 + materials['Mexallon']*400 + materials['Atmostpheric Gases']*65) /100,
 
     'Zircon' : (materials['Mexallon']*1750 + materials['Isogen']*500 + materials['Megacyte']*50 + materials['Hafnium']*50 + materials['Titanium']*10 + materials['Silicates']*15) /100,
+
+    #アイス
+    
     }
 
     all_ore_price = {

@@ -1,6 +1,7 @@
 {% load lookup %}
 
 <body>
+  {{ignores}}
   <h1>管理者 : {{admin}}</h1><br><br>
   {% for person, quantum in datas.items %}
         <h2>振込先:{{person}}</h2>
