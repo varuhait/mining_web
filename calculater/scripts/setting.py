@@ -1,5 +1,5 @@
 #各種手動入力データ
-
+efficiency = 0.75
 #jita_buy 鉱石価格
 class InitOrePrice:
     #ミネラル,月資源価格の初期設定
@@ -48,102 +48,102 @@ class InitOrePrice:
 
     standard_ore_price = {
     #月じゃない
-    'Arkonor': (materials['Tritanium']*22000 + materials['Mexallon']*2500 + materials['Megacyte']*320) /100,
+    'Arkonor': (materials['Tritanium']*22000 + materials['Mexallon']*2500 + materials['Megacyte']*320) /100 *efficiency,
 
-    'Bistot': (materials['Pyerite']*12000 + materials['Zydrine']*450 + materials['Megacyte']*100) /100,
+    'Bistot': (materials['Pyerite']*12000 + materials['Zydrine']*450 + materials['Megacyte']*100) /100 *efficiency,
 
-    'Crokite': (materials['Tritanium']*21000 + materials['Nocxium']*760 + materials['Zydrine']*135) /100,
+    'Crokite': (materials['Tritanium']*21000 + materials['Nocxium']*760 + materials['Zydrine']*135) /100 *efficiency,
 
-    'Dark Ochre': (materials['Tritanium']*10000 + materials['Isogen']*1600 + materials['Nocxium']*120) /100,
+    'Dark Ochre': (materials['Tritanium']*10000 + materials['Isogen']*1600 + materials['Nocxium']*120) /100 *efficiency,
 
-    'Gneiss' : (materials['Pyerite']*2200 + materials['Mexallon']*2400 + materials['Isogen']*300) /100,
+    'Gneiss' : (materials['Pyerite']*2200 + materials['Mexallon']*2400 + materials['Isogen']*300) /100 *efficiency,
 
-    'Hedbergite' : (materials['Pyerite']*1000 + materials['Isogen']*200 + materials['Nocxium']*100 + materials['Zydrine']*19) /100,
+    'Hedbergite' : (materials['Pyerite']*1000 + materials['Isogen']*200 + materials['Nocxium']*100 + materials['Zydrine']*19) /100 *efficiency,
 
-    'Hemorphite' : (materials['Tritanium']*2200 + materials['Isogen']*100 + materials['Nocxium']*120 + materials['Zydrine']*15) /100,
+    'Hemorphite' : (materials['Tritanium']*2200 + materials['Isogen']*100 + materials['Nocxium']*120 + materials['Zydrine']*15) /100 *efficiency,
 
-    'Jaspet' : (materials['Mexallon']*350 + materials['Nocxium']*75 + materials['Zydrine']*8) /100,
+    'Jaspet' : (materials['Mexallon']*350 + materials['Nocxium']*75 + materials['Zydrine']*8) /100 *efficiency,
 
     'Kernite' : (materials['Tritanium']*134 + materials['Mexallon']*267 + materials['Isogen']*134) *1.2,
 
-    'Mercoxit' : materials['Morhphite']*300 /100,
+    'Mercoxit' : materials['Morhphite']*300 /100 *efficiency,
 
-    'Omber' : (materials['Tritanium']*800 + materials['Pyerite']*100 + materials['Isogen']*85) /100,
+    'Omber' : (materials['Tritanium']*800 + materials['Pyerite']*100 + materials['Isogen']*85) /100 *efficiency,
 
-    'Plagioclase' : (materials['Tritanium']*107 + materials['Pyerite']*213 + materials['Mexallon']*107) /100,
+    'Plagioclase' : (materials['Tritanium']*107 + materials['Pyerite']*213 + materials['Mexallon']*107) /100 *efficiency,
 
-    'Pyroxeres' : (materials['Tritanium']*351 + materials['Pyerite']*25 + materials['Mexallon']*50 + materials['Nocxium']*5) /100,
+    'Pyroxeres' : (materials['Tritanium']*351 + materials['Pyerite']*25 + materials['Mexallon']*50 + materials['Nocxium']*5) /100 *efficiency,
 
-    'Scordite' : (materials['Tritanium']*346 + materials['Pyerite']*173) /100,
+    'Scordite' : (materials['Tritanium']*346 + materials['Pyerite']*173) /100 *efficiency,
 
-    'Spodumain' : (materials['Tritanium']*56000 + materials['Pyerite']*12050 + materials['Mexallon']*2100 + materials['Isogen']*450) /100,
+    'Spodumain' : (materials['Tritanium']*56000 + materials['Pyerite']*12050 + materials['Mexallon']*2100 + materials['Isogen']*450) /100 *efficiency,
 
-    'Veldspar' : materials['Tritanium']*415 /100,
+    'Veldspar' : materials['Tritanium']*415 /100 *efficiency,
     #月
-    'Bitumens' : (materials['Tritanium']*6000 + materials['Pyerite']*6000 + materials['Mexallon']*400 + materials['Hydrocarbons']*65) /100,
+    'Bitumens' : (materials['Tritanium']*6000 + materials['Pyerite']*6000 + materials['Mexallon']*400 + materials['Hydrocarbons']*65) /100 *efficiency,
 
-    'Carnotite' : (materials['Mexallon']*1000 + materials['Isogen']*1250 + materials['Zydrine']*50 + materials['Atmostpheric Gases']*15 + materials['Cobalt']*10 + materials['Technetium']*50) /100,
+    'Carnotite' : (materials['Mexallon']*1000 + materials['Isogen']*1250 + materials['Zydrine']*50 + materials['Atmostpheric Gases']*15 + materials['Cobalt']*10 + materials['Technetium']*50) /100 *efficiency,
 
-    'Chromite' : (materials['Pyerite']*5000 + materials['Mexallon']*1250 + materials['Isogen']*750 + materials['Nocxium']*50 + materials['Hydrocarbons']*10 + materials['Chromium']*40) /100,
+    'Chromite' : (materials['Pyerite']*5000 + materials['Mexallon']*1250 + materials['Isogen']*750 + materials['Nocxium']*50 + materials['Hydrocarbons']*10 + materials['Chromium']*40) /100 *efficiency,
 
-    'Cinnabar' : (materials['Mexallon']*1500 + materials['Isogen']*750 + materials['Megacyte']*50 + materials['Mercury']*50 + materials['Tungsten']*10 + materials['Evaporite Deposits']*15) /100,
+    'Cinnabar' : (materials['Mexallon']*1500 + materials['Isogen']*750 + materials['Megacyte']*50 + materials['Mercury']*50 + materials['Tungsten']*10 + materials['Evaporite Deposits']*15) /100 *efficiency,
 
-    'Cobaltite' : (materials['Tritanium']*7500 + materials['Pyerite']*10000 + materials['Mexallon']*500 + materials['Cobalt']*40) /100,
+    'Cobaltite' : (materials['Tritanium']*7500 + materials['Pyerite']*10000 + materials['Mexallon']*500 + materials['Cobalt']*40) /100 *efficiency,
 
-    'Coesite' : (materials['Tritanium']*10000 + materials['Pyerite']*2000 + materials['Mexallon']*400 + materials['Silicates']*65) /100,
+    'Coesite' : (materials['Tritanium']*10000 + materials['Pyerite']*2000 + materials['Mexallon']*400 + materials['Silicates']*65) /100 *efficiency,
 
-    'Euxenite' : (materials['Tritanium']*10000 + materials['Pyerite']*7500 + materials['Mexallon']*500 + materials['Scandium']*40) /100,
+    'Euxenite' : (materials['Tritanium']*10000 + materials['Pyerite']*7500 + materials['Mexallon']*500 + materials['Scandium']*40) /100 *efficiency,
 
-    'Loparite' : (materials['Nocxium']*100 + materials['Zydrine']*200 + materials['Megacyte']*50 + materials['Promethium']*22 +materials['Platinum']*10 + materials['Scandium']*20 + materials['Hydrocarbons']*20) /100,
+    'Loparite' : (materials['Nocxium']*100 + materials['Zydrine']*200 + materials['Megacyte']*50 + materials['Promethium']*22 +materials['Platinum']*10 + materials['Scandium']*20 + materials['Hydrocarbons']*20) /100 *efficiency,
 
-    'Monazite' : (materials['Nocxium']*50 + materials['Zydrine']*150 + materials['Megacyte']*150 + materials['Neodymium']*22 + materials['Chromium']*10 + materials['Tungsten']*20 + materials['Evaporite Deposits']*20) /100,
+    'Monazite' : (materials['Nocxium']*50 + materials['Zydrine']*150 + materials['Megacyte']*150 + materials['Neodymium']*22 + materials['Chromium']*10 + materials['Tungsten']*20 + materials['Evaporite Deposits']*20) /100 *efficiency,
 
-    'Otavite' : (materials['Tritanium']*5000 + materials['Mexallon']*1500 + materials['Isogen']*500 + materials['Nocxium']*50) /100,
+    'Otavite' : (materials['Tritanium']*5000 + materials['Mexallon']*1500 + materials['Isogen']*500 + materials['Nocxium']*50) /100 *efficiency,
 
-    'Pollucite' : (materials['Mexallon']*1250 + materials['Isogen']*1000 + materials['Zydrine']*50 + materials['Caesium']*50 + materials['Scandium']*10 + materials['Hydrocarbons']*15) /100,
+    'Pollucite' : (materials['Mexallon']*1250 + materials['Isogen']*1000 + materials['Zydrine']*50 + materials['Caesium']*50 + materials['Scandium']*10 + materials['Hydrocarbons']*15) /100 *efficiency,
 
-    'Scheelite' : (materials['Tritanium']*12500 + materials['Pyerite']*5000 + materials['Mexallon']*500 + materials['Tungsten']*40) /100,
+    'Scheelite' : (materials['Tritanium']*12500 + materials['Pyerite']*5000 + materials['Mexallon']*500 + materials['Tungsten']*40) /100 *efficiency,
 
-    'Sperrylite' : (materials['Tritanium']*5000 + materials['Mexallon']*1000 + materials['Isogen']*1000 + materials['Zydrine']*50 + materials['Platinum']*40 + materials['Evaporite Deposits']*10) /100,
+    'Sperrylite' : (materials['Tritanium']*5000 + materials['Mexallon']*1000 + materials['Isogen']*1000 + materials['Zydrine']*50 + materials['Platinum']*40 + materials['Evaporite Deposits']*10) /100 *efficiency,
 
-    'Sylvite' : (materials['Tritanium']*8000 + materials['Pyerite']*4000 + materials['Mexallon']*400 + materials['Evaporite Deposits']*65) /100,
+    'Sylvite' : (materials['Tritanium']*8000 + materials['Pyerite']*4000 + materials['Mexallon']*400 + materials['Evaporite Deposits']*65) /100 *efficiency,
 
-    'Titanite' : (materials['Tritanium']*15000 + materials['Pyerite']*2500 + materials['Mexallon']*500 + materials['Titanium']*40) /100,
+    'Titanite' : (materials['Tritanium']*15000 + materials['Pyerite']*2500 + materials['Mexallon']*500 + materials['Titanium']*40) /100 *efficiency,
 
-    'Vanadinite' : (materials['Pyerite']*5000 + materials['Mexallon']*750 + materials['Isogen']*1250 + materials['Zydrine']*50 + materials['Vanadium']*40 + materials['Silicates']*10) /100,
+    'Vanadinite' : (materials['Pyerite']*5000 + materials['Mexallon']*750 + materials['Isogen']*1250 + materials['Zydrine']*50 + materials['Vanadium']*40 + materials['Silicates']*10) /100 *efficiency,
 
-    'Xenotime' : (materials['Nocxium']*50 + materials['Zydrine']*100 + materials['Megacyte']*200 + materials['Dysprosium']*22 + materials['Vanadium']*10 + materials['Cobalt']*20 + materials['Atmostpheric Gases']*20) /100,
+    'Xenotime' : (materials['Nocxium']*50 + materials['Zydrine']*100 + materials['Megacyte']*200 + materials['Dysprosium']*22 + materials['Vanadium']*10 + materials['Cobalt']*20 + materials['Atmostpheric Gases']*20) /100 *efficiency,
 
-    'Ytterbite' : (materials['Nocxium']*200 + materials['Zydrine']*100 + materials['Megacyte']*50 + materials['Thulium']*22 + materials['Cadmium']*10 + materials['Titanium']*20 + materials['Silicates']*20) /100,
+    'Ytterbite' : (materials['Nocxium']*200 + materials['Zydrine']*100 + materials['Megacyte']*50 + materials['Thulium']*22 + materials['Cadmium']*10 + materials['Titanium']*20 + materials['Silicates']*20) /100 *efficiency,
 
-    'Zeolites' : (materials['Tritanium']*4000 + materials['Pyerite']*8000 + materials['Mexallon']*400 + materials['Atmostpheric Gases']*65) /100,
+    'Zeolites' : (materials['Tritanium']*4000 + materials['Pyerite']*8000 + materials['Mexallon']*400 + materials['Atmostpheric Gases']*65) /100 *efficiency,
 
-    'Zircon' : (materials['Mexallon']*1750 + materials['Isogen']*500 + materials['Megacyte']*50 + materials['Hafnium']*50 + materials['Titanium']*10 + materials['Silicates']*15) /100,
+    'Zircon' : (materials['Mexallon']*1750 + materials['Isogen']*500 + materials['Megacyte']*50 + materials['Hafnium']*50 + materials['Titanium']*10 + materials['Silicates']*15) /100 *efficiency,
 
     #アイス
-    'Clear Icicle': materials['Heavy Water']*69 + materials['Liquid Ozone']*35 + materials['Helium Isotopes']*414 + materials['Strontium Clathrates']*1,
+    'Clear Icicle': (materials['Heavy Water']*69 + materials['Liquid Ozone']*35 + materials['Helium Isotopes']*414 + materials['Strontium Clathrates']*1) *efficiency,
 
-    'Glacial Mass': materials['Heavy Water']*69 + materials['Liquid Ozone']*35 + materials['Hydrogen Isotopes']*414 + materials['Strontium Clathrates']*1,
+    'Glacial Mass': (materials['Heavy Water']*69 + materials['Liquid Ozone']*35 + materials['Hydrogen Isotopes']*414 + materials['Strontium Clathrates']*1) *efficiency,
 
-    'Blue Ice': materials['Heavy Water']*69 + materials['Liquid Ozone']*35 + materials['Oxygen Isotopes']*414 + materials['Strontium Clathrates']*1,
+    'Blue Ice': (materials['Heavy Water']*69 + materials['Liquid Ozone']*35 + materials['Oxygen Isotopes']*414 + materials['Strontium Clathrates']*1) *efficiency,
 
-    'White Glaze': materials['Heavy Water']*69 + materials['Liquid Ozone']*35 + materials['Nitrogen Isotopes']*414 + materials['Strontium Clathrates']*1,
+    'White Glaze': (materials['Heavy Water']*69 + materials['Liquid Ozone']*35 + materials['Nitrogen Isotopes']*414 + materials['Strontium Clathrates']*1) *efficiency,
 
-    'Glare Crust': materials['Heavy Water']*1381 + materials['Liquid Ozone']*691 + materials['Strontium Clathrates']*35,
+    'Glare Crust': (materials['Heavy Water']*1381 + materials['Liquid Ozone']*691 + materials['Strontium Clathrates']*35) *efficiency,
 
-    'Dark Glitter': materials['Heavy Water']*691 + materials['Liquid Ozone']*1381 + materials['Strontium Clathrates']*69,
+    'Dark Glitter': (materials['Heavy Water']*691 + materials['Liquid Ozone']*1381 + materials['Strontium Clathrates']*69) *efficiency,
 
-    'Gelidus': materials['Heavy Water']*345 + materials['Liquid Ozone']*691 + materials['Strontium Clathrates']*104,
+    'Gelidus': (materials['Heavy Water']*345 + materials['Liquid Ozone']*691 + materials['Strontium Clathrates']*104) *efficiency,
 
-    'Krystallos': materials['Heavy Water']*173 + materials['Liquid Ozone']*691 + materials['Strontium Clathrates']*173,
+    'Krystallos': (materials['Heavy Water']*173 + materials['Liquid Ozone']*691 + materials['Strontium Clathrates']*173) *efficiency,
 
-    'Thick Blue Ice': materials['Heavy Water']*104 + materials['Liquid Ozone']*55 + materials['Strontium Clathrates']*1 + materials['Oxygen Isotopes']*483,
+    'Thick Blue Ice': (materials['Heavy Water']*104 + materials['Liquid Ozone']*55 + materials['Strontium Clathrates']*1 + materials['Oxygen Isotopes']*483) *efficiency,
 
-    'Pristine White Glaze': materials['Heavy Water']*104 + materials['Liquid Ozone']*55 + materials['Strontium Clathrates']*1 + materials['Nitrogen Isotopes']*483,
+    'Pristine White Glaze': (materials['Heavy Water']*104 + materials['Liquid Ozone']*55 + materials['Strontium Clathrates']*1 + materials['Nitrogen Isotopes']*483) *efficiency,
 
-    'Smooth Glacial Mass': materials['Heavy Water']*104 + materials['Liquid Ozone']*55 + materials['Strontium Clathrates']*1 + materials['Hydrogen Isotopes']*483,
+    'Smooth Glacial Mass': (materials['Heavy Water']*104 + materials['Liquid Ozone']*55 + materials['Strontium Clathrates']*1 + materials['Hydrogen Isotopes']*483) *efficiency,
 
-    'Enriched Clear Icicle': materials['Heavy Water']*104 + materials['Liquid Ozone']*55 + materials['Strontium Clathrates']*1 + materials['Helium Isotopes']*483,
+    'Enriched Clear Icicle': (materials['Heavy Water']*104 + materials['Liquid Ozone']*55 + materials['Strontium Clathrates']*1 + materials['Helium Isotopes']*483) *efficiency,
     }
 
     all_ore_price = {

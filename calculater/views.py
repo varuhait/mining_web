@@ -48,9 +48,6 @@ def calculate_result(request):
             'admin': admin,
             'inits': ore_prices,
             'jita_buy': buy_coefficient*100,
-            'ignores': ignore_list,
-            'loots':loot_list,
-            'Trimed':Trimed_list
         }
 
         return render(request, 'calculate_result.html',dict)

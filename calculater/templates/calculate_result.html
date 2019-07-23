@@ -6,7 +6,7 @@
         <h2>振込先:{{person}}</h2>
         <table>
           <tr>
-            <th>鉱石名</th><td></td><td>単価　<td></td><td>納品量</td><td></td><td>金額</td>
+            <th>鉱石名</th><td></td><td>単価　<td></td><td>JitaBuy%</td><td></td><td>納品量</td><td></td><td>金額</td>
           </tr>
           <tr>
             <th>　</th>
@@ -17,19 +17,19 @@
             <th>　</th>
           </tr>
           <tr>
-            <th>合計</th><td></td><td></td><td></td><td></td><td>=</td><td>{{values}}</td><td>ISK</td>
+            <th>合計</th><td></td><td></td><td></td><td></td><td></td><td></td><td>=</td><td>{{values}}</td><td>ISK</td>
           </tr>
           {% elif ores == 'tax' %}
           <tr>
-            <th>管理費</th><td></td><td></td><td></td><td></td><td>=</td><td>{{values}}</td><td>ISK</td>
+            <th>管理費</th><td></td><td></td><td></td><td></td><td></td><td></td><td>=</td><td>{{values}}</td><td>ISK</td>
           </tr>
           {% elif ores == 'pay' %}
           <tr>
-            <th>支払額</th><td></td><td></td><td></td><td></td><td>=</td><td>{{values}}</td><td>ISK</td>
+            <th>支払額</th><td></td><td></td><td></td><td></td><td></td><td></td><td>=</td><td>{{values}}</td><td>ISK</td>
           </tr>
           {% else %}
           <tr>
-            <th>{{ores}}</th><td>　×　</td><td>{{inits.all_ore_price |lookup:ores}}</td>
+            <th>{{ores}}</th><td>　×　</td><td>{{inits.all_ore_price |lookup:ores}}<td>　×　</td><td>{{jita_buy}}%</td>
             {% for mass, price in values.items %}
             <td>×　</td><td>{{mass}}</td><td>=</td><td>{{price}}</td><td>ISK</td>
             {% endfor %}

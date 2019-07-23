@@ -16,7 +16,6 @@ class BalanceCalculate:
         self.loot_list = loot_list
         self.buy_coefficient = buy_coefficient
         self.fuel_tax = fuel_tax
-        self.efficiency = 0.73
 
     def balances(self):
         #プレイヤー、鉱石の辞書作成
@@ -48,15 +47,15 @@ class BalanceCalculate:
 
         #プレイヤー、鉱石毎の値段を足し合わせる
         for i in range(len(self.loot_list)):
-            self.personal_balances[self.loot_list[i][0]] += round( self.settings.all_ore_price[self.loot_list[i][2]] * self.loot_list[i][1] * self.buy_coefficient * self.efficiency)
+            self.personal_balances[self.loot_list[i][0]] += round( self.settings.all_ore_price[self.loot_list[i][2]] * self.loot_list[i][1] * self.buy_coefficient)
 
-            self.ore_balances[self.loot_list[i][2]] += round( self.settings.all_ore_price[self.loot_list[i][2]] * self.loot_list[i][1] *  self.buy_coefficient * self.efficiency)
+            self.ore_balances[self.loot_list[i][2]] += round( self.settings.all_ore_price[self.loot_list[i][2]] * self.loot_list[i][1] *  self.buy_coefficient)
 
-            self.personal_ores[self.loot_list[i][0]][self.loot_list[i][2]] += round(self.settings.all_ore_price[self.loot_list[i][2]] * self.loot_list[i][1] * self.buy_coefficient * self.efficiency)
+            self.personal_ores[self.loot_list[i][0]][self.loot_list[i][2]] += round(self.settings.all_ore_price[self.loot_list[i][2]] * self.loot_list[i][1] * self.buy_coefficient)
 
             self.personal_ores_quant[self.loot_list[i][0]][self.loot_list[i][2]] +=  self.loot_list[i][1]
 
-            self.total_balance += round( self.settings.all_ore_price[self.loot_list[i][2]] * self.loot_list[i][1] *  self.buy_coefficient * self.efficiency)
+            self.total_balance += round( self.settings.all_ore_price[self.loot_list[i][2]] * self.loot_list[i][1] *  self.buy_coefficient)
 
         for i in self.personal_balances:
             self.personal_balances_ratio[i] = self.personal_balances[i] / self.total_balance * self.buy_coefficient
