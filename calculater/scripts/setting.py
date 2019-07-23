@@ -121,7 +121,29 @@ class InitOrePrice:
     'Zircon' : (materials['Mexallon']*1750 + materials['Isogen']*500 + materials['Megacyte']*50 + materials['Hafnium']*50 + materials['Titanium']*10 + materials['Silicates']*15) /100,
 
     #アイス
-    
+    'Clear Icicle': materials['Heavy Water']*69 + materials['Liquid Ozone']*35 + materials['Helium Isotopes']*414 + materials['Strontium Clathrates']*1,
+
+    'Glacial Mass': materials['Heavy Water']*69 + materials['Liquid Ozone']*35 + materials['Hydrogen Isotopes']*414 + materials['Strontium Clathrates']*1,
+
+    'Blue Ice': materials['Heavy Water']*69 + materials['Liquid Ozone']*35 + materials['Oxygen Isotopes']*414 + materials['Strontium Clathrates']*1,
+
+    'White Glaze': materials['Heavy Water']*69 + materials['Liquid Ozone']*35 + materials['Nitrogen Isotopes']*414 + materials['Strontium Clathrates']*1,
+
+    'Glare Crust': materials['Heavy Water']*1381 + materials['Liquid Ozone']*691 + materials['Strontium Clathrates']*35,
+
+    'Dark Glitter': materials['Heavy Water']*691 + materials['Liquid Ozone']*1381 + materials['Strontium Clathrates']*69,
+
+    'Gelidus': materials['Heavy Water']*345 + materials['Liquid Ozone']*691 + materials['Strontium Clathrates']*104,
+
+    'Krystallos': materials['Heavy Water']*173 + materials['Liquid Ozone']*691 + materials['Strontium Clathrates']*173,
+
+    'Thick Blue Ice': materials['Heavy Water']*104 + materials['Liquid Ozone']*55 + materials['Strontium Clathrates']*1 + materials['Oxygen Isotopes']*483,
+
+    'Pristine White Glaze': materials['Heavy Water']*104 + materials['Liquid Ozone']*55 + materials['Strontium Clathrates']*1 + materials['Nitrogen Isotopes']*483,
+
+    'Smooth Glacial Mass': materials['Heavy Water']*104 + materials['Liquid Ozone']*55 + materials['Strontium Clathrates']*1 + materials['Hydrogen Isotopes']*483,
+
+    'Enriched Clear Icicle': materials['Heavy Water']*104 + materials['Liquid Ozone']*55 + materials['Strontium Clathrates']*1 + materials['Helium Isotopes']*483,
     }
 
     all_ore_price = {
@@ -286,4 +308,17 @@ class InitOrePrice:
     'Replate Zircon' : standard_ore_price['Zircon']*1.15,
     'Glowing Zircon' : standard_ore_price['Zircon']*2.00,
 
+    #アイス
+    'Clear Icicle': standard_ore_price['Clear Icicle'],
+    'Glacial Mass': standard_ore_price['Glacial Mass'],
+    'Blue Ice': standard_ore_price['Blue Ice'],
+    'White Glaze': standard_ore_price['White Glaze'],
+    'Glare Crust': standard_ore_price['Glare Crust'],
+    'Dark Glitter': standard_ore_price['Dark Glitter'],
+    'Gelidus': standard_ore_price['Gelidus'],
+    'Krystallos': standard_ore_price['Krystallos'],
+    'Thick Blue Ice': standard_ore_price['Thick Blue Ice'],
+    'Pristine White Glaze': standard_ore_price['Pristine White Glaze'],
+    'Smooth Glacial Mass': standard_ore_price['Smooth Glacial Mass'],
+    'Enriched Clear Icicle': standard_ore_price['Enriched Clear Icicle'],
     }

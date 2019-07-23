@@ -64,20 +64,9 @@ class Datamanage:
         for i in range(len(loot_list)):
             loot_list[i][-1] = loot_list[i][-1].replace("*","")
 
-            if type(loot_list[i][1]) is int:
-                if len(loot_list[i]) == 3:
-                    pass
-                else:
-                    loot_list[i][2] = loot_list[i][2] + ' ' + loot_list[i][3]
-                    del loot_list[i][3]
-            elif len(loot_list[i]) == 4:
-                loot_list[i][0] = loot_list[i][0] + ' ' + loot_list[i][1]
-                del loot_list[i][1]
-            else:
-                loot_list[i][0] = loot_list[i][0] + ' ' + loot_list[i][1]
-                del loot_list[i][1]
-                loot_list[i][2] = loot_list[i][2] + ' ' + loot_list[i][3]
-                del loot_list[i][3]
+            while len(loot_list[i]) != 3:
+                loot_list[i][-1] = loot_list[i][-2] + " " + loot_list[i][-1]
+                del loot_list[i][-2]
 
         #鉱石以外のアイテムを無視
         ore_prices = setting.InitOrePrice()
