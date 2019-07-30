@@ -5,14 +5,14 @@ class InitOrePrice:
     #ミネラル,月資源価格の初期設定
     materials = {
     #月じゃない
-    'Tritanium' : 6.53,
-    'Pyerite' : 4.52,
-    'Mexallon' : 59.38,
-    'Isogen' : 15.38,
-    'Nocxium' : 338.37,
-    'Zydrine' : 523.98,
-    'Megacyte' : 419.83,
-    'Morhphite' : 10544.98,
+    'Tritanium' : 6.60,
+    'Pyerite' : 4.54,
+    'Mexallon' : 57.97,
+    'Isogen' : 17.35,
+    'Nocxium' : 310.69,
+    'Zydrine' : 523.70,
+    'Megacyte' : 442.82,
+    'Morphite' : 13816.72,
 
     #月
     'Atmostpheric Gases' : 137.93,
@@ -37,13 +37,13 @@ class InitOrePrice:
     'Thulium' : 43997.45,
 
     #アイス精製物
-    'Heavy Water' : 285.40,
-    'Helium Isotopes': 715.34,
-    'Hydrogen Isotopes': 719.36,
-    'Liquid Ozone': 219.26,
-    'Nitrogen Isotopes': 649.15,
-    'Oxygen Isotopes': 718.81,
-    'Strontium Clathrates': 3795.19,
+    'Heavy Water' : 279.48,
+    'Helium Isotopes': 756.18,
+    'Hydrogen Isotopes': 645.49,
+    'Liquid Ozone': 260.85,
+    'Nitrogen Isotopes': 637.89,
+    'Oxygen Isotopes': 725.47,
+    'Strontium Clathrates': 3627.76,
     }
 
     standard_ore_price = {
@@ -66,7 +66,7 @@ class InitOrePrice:
 
     'Kernite' : (materials['Tritanium']*134 + materials['Mexallon']*267 + materials['Isogen']*134) *1.2,
 
-    'Mercoxit' : materials['Morhphite']*300 /100 *efficiency,
+    'Mercoxit' : materials['Morphite']*300 /100 *efficiency,
 
     'Omber' : (materials['Tritanium']*800 + materials['Pyerite']*100 + materials['Isogen']*85) /100 *efficiency,
 
