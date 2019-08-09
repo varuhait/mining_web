@@ -24,6 +24,7 @@ def calculate_result(request):
         ignore = request.POST['ignores']
         buy_coefficient = float(request.POST['jita_buy'])/100
         fuel_tax = float(request.POST['fuel_tax'])/100
+        developer_fee = float(request.POST['develop_fee'])/100
         admin = request.POST['administrator']
 
         data_organize = Datamanage(loot,ignore)
@@ -45,6 +46,7 @@ def calculate_result(request):
             'p_ores_q': balance[4],
             'datas' : balance[5],
             'total': balance[6],
+            'dev_fee': round(balance[6] * developer_fee),
             'admin': admin,
             'inits': ore_prices,
             'jita_buy': buy_coefficient*100,
