@@ -46,7 +46,7 @@ def calculate_result(request):
             'p_ores_q': balance[4],
             'datas' : balance[5],
             'total': balance[6],
-            'dev_fee': "balance[6] * developer_fee",
+            'dev_fee': round(balance[6] * developer_fee),
             'admin': admin,
             'inits': ore_prices,
             'jita_buy': buy_coefficient*100,
