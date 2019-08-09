@@ -40,10 +40,10 @@ class InitOrePrice:
     'Heavy Water' : 279.48,
     'Helium Isotopes': 756.18,
     'Hydrogen Isotopes': 645.49,
-    'Liquid Ozone': 260.85,
+    'Liquid Ozone': 16,
     'Nitrogen Isotopes': 637.89,
     'Oxygen Isotopes': 725.47,
-    'Strontium Clathrates': 3627.76,
+    'Strontium Clathrates': 1100,
     }
 
     standard_ore_price = {
