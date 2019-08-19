@@ -322,3 +322,18 @@ class InitOrePrice:
     'Smooth Glacial Mass': standard_ore_price['Smooth Glacial Mass'],
     'Enriched Clear Icicle': standard_ore_price['Enriched Clear Icicle'],
     }
+
+    ices = [
+        'Clear Icicle',
+        'Glacial Mass',
+        'Blue Ice',
+        'White Glaze',
+        'Glare Crust',
+        'Dark Glitter',
+        'Gelidus',
+        'Krystallos',
+        'Thick Blue Ice',
+        'Pristine White Glaze',
+        'Smooth Glacial Mass',
+        'Enriched Clear Icicle',
+    ]

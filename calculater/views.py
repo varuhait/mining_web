@@ -13,6 +13,7 @@ def calculater(request):
 def home(request):
     return render(request, 'home.html')
 
+
 def calculate_result(request):
     if request.method == 'GET':
           list = 'GET'
