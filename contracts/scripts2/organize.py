@@ -16,10 +16,16 @@ class Datamanage:
         for i in range(len(raw_contract)):
             buffer1 = raw_contract[i].split("\t")
             buffer2 = buffer1[0].split(" ")
-            while len(buffer2) != 2:
-                buffer2[1] = buffer2[1] + " " + buffer2[2]
-                del buffer2[2]
-            buffer2[1] = buffer2[1].replace('*','')
+            if buffer2[0] == "Compressed":
+                while len(buffer2) != 2:
+                    buffer2[1] = buffer2[1] + " " + buffer2[2]
+                    del buffer2[2]
+                    buffer2[1] = buffer2[1].replace('*','')
+            else:
+                while len(buffer2) != 1:
+                    buffer2[0] = buffer2[0] + " " + buffer2[1]
+                    del buffer2[1]
+                    buffer2[0] = buffer2[0].replace('*','')
             if buffer2[0] == "Compressed":
                 if buffer2[1] in self.ices:
                     pass
