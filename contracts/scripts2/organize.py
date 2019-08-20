@@ -14,24 +14,23 @@ class Datamanage:
         raw_contract = self.ore_list
         raw_contract = raw_contract.split("\r\n")
         for i in range(len(raw_contract)):
-            Contract_info.append(raw_contract[i].split("*"))
-            del Contract_info[i][-1]
-            del Contract_info[i][-1]
-            buffer = Contract_info[i][-1].split('\t')
-            del Contract_info[i][-1]
-            Contract_info[i].append(buffer[1])
-
-            buffer2 = Contract_info[i][0].split(" ")
+            buffer1 = raw_contract[i].split("\t")
+            buffer2 = buffer1[0].split(" ")
             while len(buffer2) != 2:
                 buffer2[1] = buffer2[1] + " " + buffer2[2]
                 del buffer2[2]
+            buffer2[1] = buffer2[1].replace('*','')
             if buffer2[0] == "Compressed":
-                Contract_info[i][0] = buffer2[1]
                 if buffer2[1] in self.ices:
                     pass
                 else:
-                    Contract_info[i][1] = int(Contract_info[i][1]) * 100
+                    buffer1[1] = int(buffer1[1]) * 100
+                del buffer2[0]
             else:
                 pass
+
+            buffer3 = [buffer2[0],buffer1[1]]
+            Contract_info.append(buffer3)
+
 
         return Contract_info
