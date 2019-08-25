@@ -1,4 +1,5 @@
 import scripts.setting as setting
+import unicodedata as un
 from collections import OrderedDict
 
 class Datamanage:
@@ -19,15 +20,32 @@ class Datamanage:
             del Loot_info[-1]
 
         #余分な要素を削除(及び取得アイテム数のint化)
+        #マルチバイト文字が含まれているかどうか
+        checker = false
         for i in range(len(Loot_info)):
-            del Loot_info[i][0]
-            del Loot_info[i][-1]
-            while Loot_info[i][1] != "が":
-                Loot_info[i][0] = Loot_info[i][0] + ' '+ Loot_info[i][1]
-                del Loot_info[i][1]
-            Loot_info[i].remove("が")
-            Loot_info[i].remove("x")
-            Loot_info[i][1] = int(Loot_info[i][1].replace(",",""))
+            mb =  un.east_asian_width(Loot_info[0][i])
+            checker = True
+        if checker:
+            for i in range(len(Loot_info)):
+                del Loot_info[i][0]
+                del Loot_info[i][-1]
+                while Loot_info[i][1] != "が":
+                    Loot_info[i][0] = Loot_info[i][0] + ' '+ Loot_info[i][1]
+                    del Loot_info[i][1]
+                Loot_info[i].remove("が")
+                Loot_info[i].remove("x")
+                Loot_info[i][1] = int(Loot_info[i][1].replace(",",""))
+        else:
+            for i in range(len(Loot_info)):
+                del Loot_info[i][0]
+                while Loot_info[i][1] != "has":
+                    Loot_info[i][0] = Loot_info[i][0] + ' ' + Loot_info[i][1]
+                    del Loot_info[i][1]
+                Loot_info[i].remove("has")
+                Loot_info[i].remove("looted")
+                Loot_info[i].remove("x")
+                Loot_info[i][1] = int(Loot_info[i][1].replace(",",""))
+
 
         return Loot_info
 
@@ -60,7 +78,7 @@ class Datamanage:
             del loot_list[i-count]
             count += 1
 
-        #鉱石及びプレイヤー名の結合
+        #鉱石名の結合
         for i in range(len(loot_list)):
             loot_list[i][-1] = loot_list[i][-1].replace("*","")
 
