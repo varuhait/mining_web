@@ -22,8 +22,8 @@ class Datamanage:
 
         #余分な要素を削除(及び取得アイテム数のint化)
         #マルチバイト文字が含まれているかどうか
-        for i in range(len(Loot_info[1])):
-            if Loot_info[1][i]  == "が":
+        for i in range(len(Loot_info[-1])):
+            if Loot_info[-1][i]  == "が":
                 mb = True
         if mb:
             for i in range(len(Loot_info)):
