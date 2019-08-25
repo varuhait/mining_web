@@ -21,10 +21,10 @@ class Datamanage:
 
         #余分な要素を削除(及び取得アイテム数のint化)
         #マルチバイト文字が含まれているかどうか
-        checker = 0
-        for i in range(len(Loot_info[0])):
-            mb =  un.east_asian_width(Loot_info[0][i])
-            checker = True
+        checker = False
+        for i in range(len(Loot_info[1])):
+            if Loot_info[1][i]  == "が":
+                checker = True
         if checker:
             for i in range(len(Loot_info)):
                 del Loot_info[i][0]
