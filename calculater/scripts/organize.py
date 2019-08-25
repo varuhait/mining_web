@@ -12,6 +12,7 @@ class Datamanage:
     def LootTrim(self):
         #リストへの整理
         Loot_info = []
+        mb = False
         raw_loot = self.loot
         raw_loot = raw_loot.split("\r\n")
         for i in range(len(raw_loot)):
@@ -21,8 +22,6 @@ class Datamanage:
 
         #余分な要素を削除(及び取得アイテム数のint化)
         #マルチバイト文字が含まれているかどうか
-        mb = False
-        global mb
         for i in range(len(Loot_info[1])):
             if Loot_info[1][i]  == "が":
                 mb = True
