@@ -21,7 +21,7 @@ class Datamanage:
 
         #余分な要素を削除(及び取得アイテム数のint化)
         #マルチバイト文字が含まれているかどうか
-        checker = false
+        checker = False
         for i in range(len(Loot_info[0])):
             mb =  un.east_asian_width(Loot_info[0][i])
             checker = True
