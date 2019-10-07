@@ -39,10 +39,10 @@ class InitOrePrice:
     #アイス精製物
     'Heavy Water' : 150,
     'Helium Isotopes': 560,
-    'Hydrogen Isotopes': 645.49,
+    'Hydrogen Isotopes': 580,
     'Liquid Ozone': 0,
-    'Nitrogen Isotopes': 637.89,
-    'Oxygen Isotopes': 725.47,
+    'Nitrogen Isotopes': 516,
+    'Oxygen Isotopes': 585,
     'Strontium Clathrates': 850,
     }
 
