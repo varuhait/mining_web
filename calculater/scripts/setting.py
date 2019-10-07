@@ -37,13 +37,13 @@ class InitOrePrice:
     'Thulium' : 43997.45,
 
     #アイス精製物
-    'Heavy Water' : 279.48,
-    'Helium Isotopes': 600,
+    'Heavy Water' : 150,
+    'Helium Isotopes': 560,
     'Hydrogen Isotopes': 645.49,
-    'Liquid Ozone': 16,
+    'Liquid Ozone': 0,
     'Nitrogen Isotopes': 637.89,
     'Oxygen Isotopes': 725.47,
-    'Strontium Clathrates': 1100,
+    'Strontium Clathrates': 850,
     }
 
     standard_ore_price = {
