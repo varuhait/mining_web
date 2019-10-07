@@ -1,18 +1,18 @@
 #各種手動入力データ
-efficiency = 0.75
+efficiency = 0.85
 #jita_buy 鉱石価格
 class InitOrePrice:
     #ミネラル,月資源価格の初期設定
     materials = {
     #月じゃない
-    'Tritanium' : 6.60,
-    'Pyerite' : 4.54,
-    'Mexallon' : 57.97,
-    'Isogen' : 17.35,
-    'Nocxium' : 310.69,
-    'Zydrine' : 523.70,
-    'Megacyte' : 442.82,
-    'Morphite' : 13816.72,
+    'Tritanium' : 4.2,
+    'Pyerite' : 0.95,
+    'Mexallon' : 46.95,
+    'Isogen' : 5.73,
+    'Nocxium' : 274.3,
+    'Zydrine' : 388.5,
+    'Megacyte' : 328.5,
+    'Morphite' : 14775,
 
     #月
     'Atmostpheric Gases' : 137.93,
