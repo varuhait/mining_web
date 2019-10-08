@@ -8,11 +8,11 @@ class InitOrePrice:
     'Tritanium' : 4.2,
     'Pyerite' : 1.4,
     'Mexallon' : 46.95,
-    'Isogen' : 5.73,
-    'Nocxium' : 274.3,
+    'Isogen' : 4.7,
+    'Nocxium' : 227,
     'Zydrine' : 388.5,
     'Megacyte' : 328.5,
-    'Morphite' : 14775,
+    'Morphite' : 14000,
 
     #月
     'Atmostpheric Gases' : 137.93,
