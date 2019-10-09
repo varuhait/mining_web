@@ -64,7 +64,7 @@ class InitOrePrice:
 
     'Jaspet' : (materials['Mexallon']*350 + materials['Nocxium']*75 + materials['Zydrine']*8) /100 *efficiency,
 
-    'Kernite' : (materials['Tritanium']*134 + materials['Mexallon']*267 + materials['Isogen']*134) *1.2,
+    'Kernite' : (materials['Tritanium']*134 + materials['Mexallon']*267 + materials['Isogen']*134)/100 *efficiency,
 
     'Mercoxit' : materials['Morphite']*300 /100 *efficiency,
 
