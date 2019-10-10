@@ -6,7 +6,7 @@ class InitOrePrice:
     materials = {
     #月じゃない
     'Tritanium' : 4.2,
-    'Pyerite' : 1.4,
+    'Pyerite' : 2,
     'Mexallon' : 46.95,
     'Isogen' : 4.7,
     'Nocxium' : 227,
