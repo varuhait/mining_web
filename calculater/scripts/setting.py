@@ -1,8 +1,34 @@
+#スプレッドシートAPI
+import gspread
+import json
+#ServiceAccountCredentials：Googleの各サービスへアクセスできるservice変数を生成します。
+from oauth2client.service_account import ServiceAccountCredentials
+
+#2つのAPIを記述しないとリフレッシュトークンを3600秒毎に発行し続けなければならない
+scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
+
+#認証情報設定
+#ダウンロードしたjsonファイル名をクレデンシャル変数に設定（秘密鍵、Pythonファイルから読み込みしやすい位置に置く）
+json_file = 'JitaMarketer.json'
+credentials = ServiceAccountCredentials.from_json_keyfile_name(json_file, scope)
+
+#OAuth2の資格情報を使用してGoogle APIにログインします。
+gc = gspread.authorize(credentials)
+
+#共有設定したスプレッドシートキーを変数[SPREADSHEET_KEY]に格納する。
+SPREADSHEET_KEY = '1abefJQAXC9yEfC_10B9oUenf0HCulacVeK4LhsyE-5Q'
+
+#共有設定したスプレッドシートのシート1を開く
+worksheet = gc.open_by_key(SPREADSHEET_KEY).sheet1
+
+#A1セルの値を受け取る
+import_value = worksheet.acell('D6').value
 #各種手動入力データ
 efficiency = 0.85
 #jita_buy 鉱石価格
 class InitOrePrice:
     #ミネラル,月資源価格の初期設定
+    testa = import_value
     materials = {
     #月じゃない
     'Tritanium' : 4.2,
@@ -47,6 +73,81 @@ class InitOrePrice:
     }
 
     standard_ore_price = {
+    #月じゃない
+    'Arkonor':float(worksheet.acell('L2').value.replace(',',''))/100,
+    'Omber':float(worksheet.acell('L3').value.replace(',',''))/100,
+    'Crokite':float(worksheet.acell('L4').value.replace(',',''))/100,
+    'Kernite':float(worksheet.acell('L5').value.replace(',',''))/100,
+    'Jaspet':float(worksheet.acell('L6').value.replace(',',''))/100,
+    'Scordite':float(worksheet.acell('L7').value.replace(',',''))/100,
+    'Spodumain':float(worksheet.acell('L8').value.replace(',',''))/100,
+    'Dark Ochre':float(worksheet.acell('L9').value.replace(',',''))/100,
+    'Gneiss':float(worksheet.acell('L10').value.replace(',',''))/100,
+    'Pyroxeres':float(worksheet.acell('L11').value.replace(',',''))/100,
+    'Bistot':float(worksheet.acell('L12').value.replace(',',''))/100,
+    'Plagioclase':float(worksheet.acell('L13').value.replace(',',''))/100,
+    'Hedbergite':float(worksheet.acell('L14').value.replace(',',''))/100,
+    'Hemorphite':float(worksheet.acell('L15').value.replace(',',''))/100,
+    'Veldspar':float(worksheet.acell('L16').value.replace(',',''))/100,
+    'Mercoxit':float(worksheet.acell('L17').value.replace(',',''))/100,
+
+    #月
+    'Bitumens' : (materials['Tritanium']*6000 + materials['Pyerite']*6000 + materials['Mexallon']*400 + materials['Hydrocarbons']*65) /100 *efficiency,
+
+    'Carnotite' : (materials['Mexallon']*1000 + materials['Isogen']*1250 + materials['Zydrine']*50 + materials['Atmostpheric Gases']*15 + materials['Cobalt']*10 + materials['Technetium']*50) /100 *efficiency,
+
+    'Chromite' : (materials['Pyerite']*5000 + materials['Mexallon']*1250 + materials['Isogen']*750 + materials['Nocxium']*50 + materials['Hydrocarbons']*10 + materials['Chromium']*40) /100 *efficiency,
+
+    'Cinnabar' : (materials['Mexallon']*1500 + materials['Isogen']*750 + materials['Megacyte']*50 + materials['Mercury']*50 + materials['Tungsten']*10 + materials['Evaporite Deposits']*15) /100 *efficiency,
+
+    'Cobaltite' : (materials['Tritanium']*7500 + materials['Pyerite']*10000 + materials['Mexallon']*500 + materials['Cobalt']*40) /100 *efficiency,
+
+    'Coesite' : (materials['Tritanium']*10000 + materials['Pyerite']*2000 + materials['Mexallon']*400 + materials['Silicates']*65) /100 *efficiency,
+
+    'Euxenite' : (materials['Tritanium']*10000 + materials['Pyerite']*7500 + materials['Mexallon']*500 + materials['Scandium']*40) /100 *efficiency,
+
+    'Loparite' : (materials['Nocxium']*100 + materials['Zydrine']*200 + materials['Megacyte']*50 + materials['Promethium']*22 +materials['Platinum']*10 + materials['Scandium']*20 + materials['Hydrocarbons']*20) /100 *efficiency,
+
+    'Monazite' : (materials['Nocxium']*50 + materials['Zydrine']*150 + materials['Megacyte']*150 + materials['Neodymium']*22 + materials['Chromium']*10 + materials['Tungsten']*20 + materials['Evaporite Deposits']*20) /100 *efficiency,
+
+    'Otavite' : (materials['Tritanium']*5000 + materials['Mexallon']*1500 + materials['Isogen']*500 + materials['Nocxium']*50) /100 *efficiency,
+
+    'Pollucite' : (materials['Mexallon']*1250 + materials['Isogen']*1000 + materials['Zydrine']*50 + materials['Caesium']*50 + materials['Scandium']*10 + materials['Hydrocarbons']*15) /100 *efficiency,
+
+    'Scheelite' : (materials['Tritanium']*12500 + materials['Pyerite']*5000 + materials['Mexallon']*500 + materials['Tungsten']*40) /100 *efficiency,
+
+    'Sperrylite' : (materials['Tritanium']*5000 + materials['Mexallon']*1000 + materials['Isogen']*1000 + materials['Zydrine']*50 + materials['Platinum']*40 + materials['Evaporite Deposits']*10) /100 *efficiency,
+
+    'Sylvite' : (materials['Tritanium']*8000 + materials['Pyerite']*4000 + materials['Mexallon']*400 + materials['Evaporite Deposits']*65) /100 *efficiency,
+
+    'Titanite' : (materials['Tritanium']*15000 + materials['Pyerite']*2500 + materials['Mexallon']*500 + materials['Titanium']*40) /100 *efficiency,
+
+    'Vanadinite' : (materials['Pyerite']*5000 + materials['Mexallon']*750 + materials['Isogen']*1250 + materials['Zydrine']*50 + materials['Vanadium']*40 + materials['Silicates']*10) /100 *efficiency,
+
+    'Xenotime' : (materials['Nocxium']*50 + materials['Zydrine']*100 + materials['Megacyte']*200 + materials['Dysprosium']*22 + materials['Vanadium']*10 + materials['Cobalt']*20 + materials['Atmostpheric Gases']*20) /100 *efficiency,
+
+    'Ytterbite' : (materials['Nocxium']*200 + materials['Zydrine']*100 + materials['Megacyte']*50 + materials['Thulium']*22 + materials['Cadmium']*10 + materials['Titanium']*20 + materials['Silicates']*20) /100 *efficiency,
+
+    'Zeolites' : (materials['Tritanium']*4000 + materials['Pyerite']*8000 + materials['Mexallon']*400 + materials['Atmostpheric Gases']*65) /100 *efficiency,
+
+    'Zircon' : (materials['Mexallon']*1750 + materials['Isogen']*500 + materials['Megacyte']*50 + materials['Hafnium']*50 + materials['Titanium']*10 + materials['Silicates']*15) /100 *efficiency,
+
+    #アイス
+    'Blue Ice':float(worksheet.acell('L19').value.replace(',','')),
+    'Clear Icicle':float(worksheet.acell('L20').value.replace(',','')),
+    'Dark Glitter':float(worksheet.acell('L21').value.replace(',','')),
+    'Enriched Clear Icicle':float(worksheet.acell('L22').value.replace(',','')),
+    'Gelidus':float(worksheet.acell('L23').value.replace(',','')),
+    'Glacial Mass':float(worksheet.acell('L24').value.replace(',','')),
+    'Glare Crust':float(worksheet.acell('L25').value.replace(',','')),
+    'Krystallos':float(worksheet.acell('L26').value.replace(',','')),
+    'Pristine White Glaze':float(worksheet.acell('L27').value.replace(',','')),
+    'Smooth Glacial Mass':float(worksheet.acell('L28').value.replace(',','')),
+    'Thick Blue Ice':float(worksheet.acell('L29').value.replace(',','')),
+    'White Glaze':float(worksheet.acell('L30').value.replace(',','')),
+    }
+
+    standard_ore_price_old = {
     #月じゃない
     'Arkonor': (materials['Tritanium']*22000 + materials['Mexallon']*2500 + materials['Megacyte']*320) /100 *efficiency,
 

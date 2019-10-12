@@ -1,0 +1,30 @@
+<url=showinfo:28367>Compressed Arkonor*</url>
+  <url=showinfo:28416>Compressed Omber*</url>
+  <url=showinfo:28391>Compressed Crokite*</url>
+  <url=showinfo:28410>Compressed Kernite*</url>
+  <url=showinfo:28406>Compressed Jaspet*</url> 
+ <url=showinfo:28429>Compressed Scordite*</url>
+ <url=showinfo:28420>Compressed Spodumain*</url>
+<url=showinfo:28394>Compressed Dark Ochre*</url> 
+ <url=showinfo:28397>Compressed Gneiss*</url> 
+ <url=showinfo:28424>Compressed Pyroxeres*</url>
+  <url=showinfo:28388>Compressed Bistot*</url> 
+ <url=showinfo:28422>Compressed Plagioclase*</url> 
+ <url=showinfo:28401>Compressed Hedbergite*</url>
+  <url=showinfo:28403>Compressed Hemorphite*</url>
+<url=showinfo:28432>Compressed Veldspar*</url>
+  <url=showinfo:28413>Compressed Mercoxit*</url>
+
+
+<url=showinfo:28433>Compressed Blue Ice*</url>  
+<url=showinfo:28434>Compressed Clear Icicle*</url> 
+ <url=showinfo:28435>Compressed Dark Glitter*</url> 
+ <url=showinfo:28436>Compressed Enriched Clear Icicle*</url>  
+<url=showinfo:28437>Compressed Gelidus*</url> 
+ <url=showinfo:28438>Compressed Glacial Mass*</url>
+<url=showinfo:28439>Compressed Glare Crust*</url>  
+<url=showinfo:28440>Compressed Krystallos*</url>  
+<url=showinfo:28441>Compressed Pristine White Glaze*</url> 
+ <url=showinfo:28442>Compressed Smooth Glacial Mass*</url> 
+ <url=showinfo:28443>Compressed Thick Blue Ice*</url> 
+ <url=showinfo:28444>Compressed White Glaze*</url>
