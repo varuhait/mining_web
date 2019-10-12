@@ -76,7 +76,7 @@ class InitOrePrice:
         'Strontium Clathrates': 850,
         }
 
-        """
+    """
     standard_ore_price_new = {
     #月じゃない
     'Arkonor':float(worksheet.acell('L2').value.replace(',',''))/100,
