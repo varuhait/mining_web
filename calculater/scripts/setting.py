@@ -1,3 +1,4 @@
+"""
 #スプレッドシートAPI
 import sys
 sys.path.append('/home/oncbnminers/.local/lib/python2.7/site-packages')
@@ -26,6 +27,7 @@ worksheet = gc.open_by_key(SPREADSHEET_KEY).sheet1
 
 #A1セルの値を受け取る
 import_value = worksheet.acell('D6').value
+"""
 #各種手動入力データ
 efficiency = 0.85
 #jita_buy 鉱石価格
@@ -75,7 +77,7 @@ class InitOrePrice:
     'Strontium Clathrates': 850,
     }
 
-    standard_ore_price = {
+    standard_ore_price_new = {
     #月じゃない
     'Arkonor':float(worksheet.acell('L2').value.replace(',',''))/100,
     'Omber':float(worksheet.acell('L3').value.replace(',',''))/100,
@@ -150,7 +152,7 @@ class InitOrePrice:
     'White Glaze':float(worksheet.acell('L30').value.replace(',','')),
     }
 
-    standard_ore_price_old = {
+    standard_ore_price = {
     #月じゃない
     'Arkonor': (materials['Tritanium']*22000 + materials['Mexallon']*2500 + materials['Megacyte']*320) /100 *efficiency,
 
