@@ -1,4 +1,5 @@
 #スプレッドシートAPI
+sys.path.append('/path/to/gspread')
 import gspread
 import json
 #ServiceAccountCredentials：Googleの各サービスへアクセスできるservice変数を生成します。
