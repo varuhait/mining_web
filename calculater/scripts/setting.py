@@ -1,4 +1,5 @@
 #スプレッドシートAPI
+import sys
 sys.path.append('/path/to/gspread')
 import gspread
 import json
