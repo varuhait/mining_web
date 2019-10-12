@@ -151,7 +151,8 @@ class InitOrePrice:
     'White Glaze':float(worksheet.acell('L30').value.replace(',','')),
     }
 """
-    standard_ore_price = {
+
+standard_ore_price = {
     #月じゃない
     'Arkonor': (materials['Tritanium']*22000 + materials['Mexallon']*2500 + materials['Megacyte']*320) /100 *efficiency,
 
