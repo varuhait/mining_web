@@ -1,6 +1,6 @@
 #スプレッドシートAPI
 import sys
-sys.path.append('/path/to/gspread')
+sys.path.append('/home/oncbnminers/.local/lib/python2.7/site-packages/')
 import gspread
 import json
 #ServiceAccountCredentials：Googleの各サービスへアクセスできるservice変数を生成します。
