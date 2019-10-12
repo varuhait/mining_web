@@ -252,7 +252,7 @@ standard_ore_price = {
     'Enriched Clear Icicle': (materials['Heavy Water']*104 + materials['Liquid Ozone']*55 + materials['Strontium Clathrates']*1 + materials['Helium Isotopes']*483) *efficiency,
     }
 
-    all_ore_price = {
+all_ore_price = {
     #月じゃない
     'Arkonor' : standard_ore_price['Arkonor'],
     'Crimson Arkonor' : standard_ore_price['Arkonor']*1.05,
@@ -429,7 +429,7 @@ standard_ore_price = {
     'Enriched Clear Icicle': standard_ore_price['Enriched Clear Icicle'],
     }
 
-    ices = [
+ices = [
         'Clear Icicle',
         'Glacial Mass',
         'Blue Ice',
