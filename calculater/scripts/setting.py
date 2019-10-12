@@ -33,51 +33,50 @@ efficiency = 0.85
 #jita_buy 鉱石価格
 class InitOrePrice:
     #ミネラル,月資源価格の初期設定
-materials = {
-
+    materials = {
     #月じゃない
-    'Tritanium' : 4.2,
-    'Pyerite' : 2,
-    'Mexallon' : 46.95,
-    'Isogen' : 4.7,
-    'Nocxium' : 227,
-    'Zydrine' : 388.5,
-    'Megacyte' : 328.5,
-    'Morphite' : 14000,
+        'Tritanium' : 4.2,
+        'Pyerite' : 2,
+        'Mexallon' : 46.95,
+        'Isogen' : 4.7,
+        'Nocxium' : 227,
+        'Zydrine' : 388.5,
+        'Megacyte' : 328.5,
+        'Morphite' : 14000,
 
-    #月
-    'Atmostpheric Gases' : 137.93,
-    'Evaporite Deposits' : 2198.95,
-    'Hydrocarbons' : 190.97,
-    'Silicates' : 2184.92,
-    'Cobalt' : 2068.95,
-    'Scandium' : 3196.95,
-    'Titanium' : 4397.97,
-    'Tungsten' : 8898.85,
-    'Cadmium' : 12500.01,
-    'Vanadium' : 8746.96,
-    'Chromium' : 14769.97,
-    'Platinum' : 14999.97,
-    'Caesium' : 12999.97,
-    'Technetium' : 18477.93,
-    'Hafnium' : 17844.93,
-    'Mercury' : 9908.06,
-    'Promethium' : 95634.00,
-    'Dysprosium' : 91799.00,
-    'Neodymium' : 90798.68,
-    'Thulium' : 43997.45,
+        #月
+        'Atmostpheric Gases' : 137.93,
+        'Evaporite Deposits' : 2198.95,
+        'Hydrocarbons' : 190.97,
+        'Silicates' : 2184.92,
+        'Cobalt' : 2068.95,
+        'Scandium' : 3196.95,
+        'Titanium' : 4397.97,
+        'Tungsten' : 8898.85,
+        'Cadmium' : 12500.01,
+        'Vanadium' : 8746.96,
+        'Chromium' : 14769.97,
+        'Platinum' : 14999.97,
+        'Caesium' : 12999.97,
+        'Technetium' : 18477.93,
+        'Hafnium' : 17844.93,
+        'Mercury' : 9908.06,
+        'Promethium' : 95634.00,
+        'Dysprosium' : 91799.00,
+        'Neodymium' : 90798.68,
+        'Thulium' : 43997.45,
 
-    #アイス精製物
-    'Heavy Water' : 150,
-    'Helium Isotopes': 560,
-    'Hydrogen Isotopes': 580,
-    'Liquid Ozone': 0,
-    'Nitrogen Isotopes': 516,
-    'Oxygen Isotopes': 585,
-    'Strontium Clathrates': 850,
-    }
-    
-"""
+        #アイス精製物
+        'Heavy Water' : 150,
+        'Helium Isotopes': 560,
+        'Hydrogen Isotopes': 580,
+        'Liquid Ozone': 0,
+        'Nitrogen Isotopes': 516,
+        'Oxygen Isotopes': 585,
+        'Strontium Clathrates': 850,
+        }
+
+        """
     standard_ore_price_new = {
     #月じゃない
     'Arkonor':float(worksheet.acell('L2').value.replace(',',''))/100,
@@ -152,9 +151,9 @@ materials = {
     'Thick Blue Ice':float(worksheet.acell('L29').value.replace(',','')),
     'White Glaze':float(worksheet.acell('L30').value.replace(',','')),
     }
-"""
+    """
 
-standard_ore_price = {
+    standard_ore_price = {
     #月じゃない
     'Arkonor': (materials['Tritanium']*22000 + materials['Mexallon']*2500 + materials['Megacyte']*320) /100 *efficiency,
 
@@ -254,7 +253,7 @@ standard_ore_price = {
     'Enriched Clear Icicle': (materials['Heavy Water']*104 + materials['Liquid Ozone']*55 + materials['Strontium Clathrates']*1 + materials['Helium Isotopes']*483) *efficiency,
     }
 
-all_ore_price = {
+    all_ore_price = {
     #月じゃない
     'Arkonor' : standard_ore_price['Arkonor'],
     'Crimson Arkonor' : standard_ore_price['Arkonor']*1.05,
@@ -431,7 +430,7 @@ all_ore_price = {
     'Enriched Clear Icicle': standard_ore_price['Enriched Clear Icicle'],
     }
 
-ices = [
+    ices = [
         'Clear Icicle',
         'Glacial Mass',
         'Blue Ice',
