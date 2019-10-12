@@ -33,7 +33,8 @@ efficiency = 0.85
 #jita_buy 鉱石価格
 class InitOrePrice:
     #ミネラル,月資源価格の初期設定
-    materials = {
+materials = {
+
     #月じゃない
     'Tritanium' : 4.2,
     'Pyerite' : 2,
@@ -75,6 +76,7 @@ class InitOrePrice:
     'Oxygen Isotopes': 585,
     'Strontium Clathrates': 850,
     }
+    
 """
     standard_ore_price_new = {
     #月じゃない
