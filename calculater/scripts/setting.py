@@ -75,7 +75,7 @@ class InitOrePrice:
     'Oxygen Isotopes': 585,
     'Strontium Clathrates': 850,
     }
-
+"""
     standard_ore_price_new = {
     #月じゃない
     'Arkonor':float(worksheet.acell('L2').value.replace(',',''))/100,
@@ -150,7 +150,7 @@ class InitOrePrice:
     'Thick Blue Ice':float(worksheet.acell('L29').value.replace(',','')),
     'White Glaze':float(worksheet.acell('L30').value.replace(',','')),
     }
-
+"""
     standard_ore_price = {
     #月じゃない
     'Arkonor': (materials['Tritanium']*22000 + materials['Mexallon']*2500 + materials['Megacyte']*320) /100 *efficiency,
