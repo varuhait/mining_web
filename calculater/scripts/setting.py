@@ -33,7 +33,6 @@ efficiency = 0.85
 #jita_buy 鉱石価格
 class InitOrePrice:
     #ミネラル,月資源価格の初期設定
-    testa = import_value
     materials = {
     #月じゃない
     'Tritanium' : 4.2,
