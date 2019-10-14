@@ -13,6 +13,11 @@ def calculater(request):
 def home(request):
     return render(request, 'home.html')
 
+def ore_list(request):
+    dict = {
+        'ores':InitOrePrice.ores_list,
+    }
+    return render(request, 'ore_list.html', dict)
 
 def calculate_result(request):
     if request.method == 'GET':

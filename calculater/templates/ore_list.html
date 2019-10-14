@@ -1,0 +1,15 @@
+<body>
+  <br>
+  <h1>月・アイス以外の鉱石単価表</h1>
+  <br>
+  <p>※この表は1ユニット辺りの単価となるため、体積には差があります</p>
+  <br>
+  <table>
+    {% for dict in ores %}
+      {% for ore, price in dict.items %}
+      <tr><th>{{ore}}</th><td>:　</td><td>{{price}}</td></tr>
+      {% endfor%}
+      <tr><th>　</th></tr>
+    {% endfor %}
+  </table>
+</body>

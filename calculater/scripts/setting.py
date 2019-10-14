@@ -441,3 +441,99 @@ class InitOrePrice:
         'Smooth Glacial Mass',
         'Enriched Clear Icicle',
     ]
+
+    ores_list = [{
+        'Arkonor' : round(standard_ore_price['Arkonor']),
+        'Crimson Arkonor' : round(standard_ore_price['Arkonor']*1.05),
+        'Prime Arkonor' : round(standard_ore_price['Arkonor']*1.10),
+        'Flawless Arkonor' : round(standard_ore_price['Arkonor']*1.15),
+        },
+        {
+        'Bistot' : round(standard_ore_price['Bistot']),
+        'Triclinic Bistot' : round(standard_ore_price['Bistot']*1.05),
+        'Monoclinic Bistot' : round(standard_ore_price['Bistot']*1.10),
+        'Cubic Bistot' : round(standard_ore_price['Bistot']*1.15),
+        },
+        {
+        'Crokite' : round(standard_ore_price['Crokite']),
+        'Sharp Crokite' : round(standard_ore_price['Crokite']*1.05),
+        'Crystaline Crokite' : round(standard_ore_price['Crokite']*1.10),
+        'Pellucid Crokite' : round(standard_ore_price['Crokite']*1.15),
+        },
+        {
+        'Dark Ochre' : round(standard_ore_price['Dark Ochre']),
+        'Onyx Ochre' : round(standard_ore_price['Dark Ochre']*1.05),
+        'Obsidian Ochre' : round(standard_ore_price['Dark Ochre']*1.10),
+        'Jet Ochre' : round(standard_ore_price['Dark Ochre']*1.15),
+        },
+        {
+        'Gneiss' : round(standard_ore_price['Gneiss']),
+        'Iridescent Gneiss' : round(standard_ore_price['Gneiss']*1.05),
+        'Prismatic Gneiss' : round(standard_ore_price['Gneiss']*1.10),
+        'Brilliant Gneiss' : round(standard_ore_price['Gneiss']*1.15),
+        },
+        {
+        'Hedbergite' : round(standard_ore_price['Hedbergite']),
+        'Virtric Hedbergite' : round(standard_ore_price['Hedbergite']*1.05),
+        'Glazed Hedbergite' : round(standard_ore_price['Hedbergite']*1.10),
+        'Lustrous Hedbergite' : round(standard_ore_price['Hedbergite']*1.15),
+        },
+        {
+        'Hemorphite' : round(standard_ore_price['Hemorphite']),
+        'Vivid Hemorphite' : round(standard_ore_price['Hemorphite']*1.05),
+        'Radiant Hemorphite' : round(standard_ore_price['Hemorphite']*1.10),
+        'Scintillating Hemorphite' : round(standard_ore_price['Hemorphite']*1.15),
+        },
+        {
+        'Jaspet' : round(standard_ore_price['Jaspet']),
+        'Pure Jaspet' : round(standard_ore_price['Jaspet']*1.05),
+        'Pristine Jaspet' : round(standard_ore_price['Jaspet']*1.10),
+        'Immaculate Jaspet' : round(standard_ore_price['Jaspet']*1.15),
+        },
+        {
+        'Kernite' : round(standard_ore_price['Kernite']),
+        'Luminous Kernite' : round(standard_ore_price['Kernite']*1.05),
+        'Fiery Kernite' : round(standard_ore_price['Kernite']*1.10),
+        'Resplendant Kernite' : round(standard_ore_price['Kernite']*1.15),
+        },
+        {
+        'Mercoxit' : round(standard_ore_price['Mercoxit']),
+        'Magma Mercoxit' : round(standard_ore_price['Mercoxit']*1.05),
+        'Vitreous Mercoxit' : round(standard_ore_price['Mercoxit']*1.10),
+        },
+        {
+        'Omber' : round(standard_ore_price['Omber']),
+        'Silvery Omber' : round(standard_ore_price['Omber']*1.05),
+        'Golden Omber' : round(standard_ore_price['Omber']*1.10),
+        'Platinoid Omber' : round(standard_ore_price['Omber']*1.15),
+        },
+        {
+        'Plagioclase' : round(standard_ore_price['Plagioclase']),
+        'Azure Plagioclase' : round(standard_ore_price['Plagioclase']*1.05),
+        'Rich Plagioclase' : round(standard_ore_price['Plagioclase']*1.10),
+        'Sparkling Plagioclase' : round(standard_ore_price['Plagioclase']*1.15),
+        },
+        {
+        'Pyroxeres' : round(standard_ore_price['Pyroxeres']),
+        'Solid Pyroxeres' : round(standard_ore_price['Pyroxeres']*1.05),
+        'Viscous Pyroxeres' : round(standard_ore_price['Pyroxeres']*1.10),
+        'Opulent Pyroxeres' : round(standard_ore_price['Pyroxeres']*1.15),
+        },
+        {
+        'Scordite' : round(standard_ore_price['Scordite']),
+        'Condensed Scordite' : round(standard_ore_price['Scordite']*1.05),
+        'Massive Scordite' : round(standard_ore_price['Scordite']*1.10),
+        'Glossy Scordite' : round(standard_ore_price['Scordite']*1.15),
+        },
+        {
+        'Spodumain' : round(standard_ore_price['Spodumain']),
+        'Bright Spodumain' : round(standard_ore_price['Spodumain']*1.05),
+        'Gleaming Spodumain' : round(standard_ore_price['Spodumain']*1.10),
+        'Dazzling Spodumain' : round(standard_ore_price['Spodumain']*1.15),
+        },
+        {
+        'Veldspar' : round(standard_ore_price['Veldspar']),
+        'Concentrated Veldspar' : round(standard_ore_price['Veldspar']*1.05),
+        'Dense Veldspar' : round(standard_ore_price['Veldspar']*1.10),
+        'Stable Veldspar' : round(standard_ore_price['Veldspar']*1.15),
+        }]
