@@ -4,10 +4,10 @@ import gspread
 import json
 from oauth2client.service_account import ServiceAccountCredentials
 
-scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
+scopes = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
 
 json_file = 'JitaMarketer.json'
-credentials = ServiceAccountCredentials.from_json_keyfile_name(json_file, scope)
+credentials = ServiceAccountCredentials.from_json_keyfile_name(json_file, scopes)
 
 gc = gspread.authorize(credentials)
 
