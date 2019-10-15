@@ -1,7 +1,5 @@
 #スプレッドシートAPI
 import sys
-sys.path.append('/home/oncbnminers/.local/lib/python2.7/site-packages')
-sys.path.append('/usr/local/lib/python2.7/dist-packages')
 import gspread
 import json
 from oauth2client.service_account import ServiceAccountCredentials
