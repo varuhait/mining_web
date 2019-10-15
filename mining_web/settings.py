@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -25,7 +26,7 @@ SECRET_KEY = 'em#u8fw2%$i@n$bnm-g7j^^$t6zu#u30k(r79nu)o-&l&@n!po'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['oncbnminers.pythonanywhere.com','127.0.0.1']
+ALLOWED_HOSTS = ['oncbnminers.pythonanywhere.com','oncbnminer.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
