@@ -54,7 +54,7 @@ def calculate_result(request):
             'total': balance[6],
             'org' : round(balance[6]*(fuel_tax+developer_fee)),
             'dev_fee': round(balance[6] * developer_fee),
-            'total_end': round(balance[6]*(1-developer_fee)),
+            'total_end': round(balance[6]*(1-fuel_tax-developer_fee)),
             'admin': admin,
             'inits': ore_prices,
             'jita_buy': buy_coefficient*100,
