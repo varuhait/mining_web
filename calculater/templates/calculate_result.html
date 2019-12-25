@@ -1,10 +1,11 @@
 {% load lookup %}
 
 <body>
-  <h1>管理者 : {{admin}}</h1><br>
-  <h2>採掘合計 : {{total}} ISK</h2>
-  <p>振込先 : varuhait eldersha</p>
-  <p>開発費 : {{dev_fee}} ISK</p><br>
+  <h1>管理者 : {{admin}}</h1>
+  <p>採掘合計（支払総額＋管理費総額） : {{total}} ISK</p>
+  <p>管理費総額 : {{org}} ISK</p>
+  <p>開発費総額 : {{dev_fee}} ISK</p><br>
+  <p>支払総額 : {{total_end}} ISK
   {% for person, quantum in datas.items %}
         <h2>振込先:{{person}}</h2>
         <table>
