@@ -52,7 +52,7 @@ def calculate_result(request):
             'p_ores_q': balance[4],
             'datas' : balance[5],
             'total': balance[6],
-            'org' : round(balance[6]*(fuel_tax+developer_fee)),
+            'org' : round(balance[6]*fuel_tax),
             'dev_fee': round(balance[6] * developer_fee),
             'total_end': round(balance[6]*(1-fuel_tax-developer_fee)),
             'admin': admin,
